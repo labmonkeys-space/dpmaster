@@ -9,4 +9,4 @@ Server_New ();
 my $clientRef = Client_New ();
 Client_SetProperty ($clientRef, "alwaysUseExtendedQuery", 1);
 
-exit Test_Run ("Client using an extended query (getserversExt)");
+Test_Run ("Client using an extended query (getserversExt)");

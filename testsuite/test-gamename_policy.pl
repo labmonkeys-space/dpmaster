@@ -3,7 +3,6 @@
 use strict;
 use testlib;
 
-my $fail = 0;
 
 for (my $i = 0; $i < 4; $i++) {
 	my $gameName = "dpmasterTest" . ($i + 1);
@@ -29,7 +28,7 @@ my %gamePolicy = (
 	],
 );
 Master_SetProperty ("gamePolicy", \%gamePolicy);
-$fail |= Test_Run ("Game policy using \"accept\"");
+Test_Run ("Game policy using \"accept\"");
 
 
 %gamePolicy = (
@@ -42,6 +41,4 @@ $fail |= Test_Run ("Game policy using \"accept\"");
 	],
 );
 Master_SetProperty ("gamePolicy", \%gamePolicy);
-$fail |= Test_Run ("Game policy using \"reject\"");
-
-exit $fail;
+Test_Run ("Game policy using \"reject\"");

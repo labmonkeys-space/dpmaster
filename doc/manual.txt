@@ -198,14 +198,10 @@ message, unlike normal heartbeats.
 
 Protocol numbers are used to figure out the game name when clients don't send it
 with their "getservers" requests, and unfortunately this is the case for all the
-anonymous games currently supported. Note that protocol numbers are hints here,
-not reservations. Named games are able to use the protocol numbers of their
-choice, even if some of those protocol numbers are also registered by anonymous
-games, as dpmaster will be able to differentiate between those 2 categories of
-games anyway. If the protocol declared by an anonymous client doesn't match any
-of the registered protocol numbers, dpmaster will search its server list for an
-anonymous game that uses the same protocol number. It will then use this
-server's game name as the request's game name, as a fallback.
+anonymous games currently supported. If the protocol declared by the client
+doesn't match any of the registered protocol numbers, dpmaster will search its
+server list for an anonymous game that uses the same protocol number. It will
+then use this server's game name as the request's game name.
 
 Options allows you to specify non-standard behaviours for a game. For example,
 the WoET's clients expect the master server to send them the complete list of

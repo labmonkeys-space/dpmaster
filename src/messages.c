@@ -3,7 +3,7 @@
 
 	Message management for dpmaster
 
-	Copyright (C) 2004-2012  Mathieu Olivier
+	Copyright (C) 2004-2010  Mathieu Olivier
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -32,10 +32,10 @@
 
 // ---------- Constants ---------- //
 
-// Timeout after a valid infoResponse (in seconds)
+// Timeout after a valid infoResponse (in secondes)
 #define TIMEOUT_INFORESPONSE (15 * 60)
 
-// Period of validity for a challenge string (in seconds)
+// Period of validity for a challenge string (in secondes)
 #define TIMEOUT_CHALLENGE 2
 
 // Maximum size of a reponse packet

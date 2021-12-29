@@ -4,8 +4,6 @@ use strict;
 use testlib;
 
 
-my $fail = 0;
-
 Master_SetProperty ("maxNbServersPerAddr", 2);
 
 # The 2 first servers should be accepted
@@ -18,7 +16,7 @@ Server_SetProperty ($server3Ref, "cannotBeAnswered", 1);
 
 my $clientRef = Client_New ();
 
-$fail |= Test_Run ("Maximum number of servers per address (IPv4)");
+Test_Run ("Maximum number of servers per address (IPv4)");
 
 
 # Run the same test using IPv6
@@ -28,6 +26,4 @@ Server_SetProperty ($server3Ref, "useIPv6", 1);
 
 Client_SetProperty ($clientRef, "useIPv6", 1);
 
-$fail |= Test_Run ("Maximum number of servers per address (IPv6)");
-
-exit $fail;
+Test_Run ("Maximum number of servers per address (IPv6)");

@@ -22,7 +22,7 @@ use constant DEFAULT_DPMASTER_PORT => 27950;
 use constant DEFAULT_GAMENAME => "DpmasterTest";
 use constant DEFAULT_PROTOCOL => 5;
 use constant QUAKE3ARENA_GAMENAME => "Quake3Arena";
-use constant QUAKE3ARENA_PROTOCOL => 68;
+use constant QUAKE3ARENA_PROTOCOL => 67;
 use constant RTCW_GAMENAME => "wolfmp";
 use constant RTCW_PROTOCOL => 60;
 use constant WOET_GAMENAME => "et";
@@ -307,7 +307,7 @@ sub Client_HandleGetServersReponse {
 	my $extended = shift;
 
 	my $strlen = length($addrList);
-	Common_VerbosePrint ("Client_HandleGetServersReponse: client $clientRef->{id} received a getservers" . ($extended ? "Ext" : "") . "Response\n");
+	Common_VerbosePrint ("Client received a getservers" . ($extended ? "Ext" : "") . "Response\n");
 		
 	$clientRef->{serverListCount}++;
 
@@ -321,12 +321,6 @@ sub Client_HandleGetServersReponse {
 			# If end of transmission is found
 			if ($address eq "EOT\0" and $port == 0) {
 				Common_VerbosePrint ("    * End Of Transmission\n");
-				return 1;
-			}
-
-			# If truncated end of transmission is found
-			if ($address eq "EOT" and not defined ($port)) {
-				Common_VerbosePrint ("    * End Of Transmission (truncated)\n");
 				return 1;
 			}
 

@@ -17,4 +17,4 @@ Server_SetProperty ($server3Ref, "cannotBeAnswered", 1);
 my $clientRef = Client_New ();
 
 
-exit Test_Run ("Server list becomes full");
+Test_Run ("Server list becomes full");

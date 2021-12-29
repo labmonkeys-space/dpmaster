@@ -6,10 +6,6 @@
                                 ---------------
 
 
-* Version 2.3-dev:
-  - The date in the log header was incorrect when it was enabled from the start
-  - Several little fixes and enhancements to the test suite, by Simon McVittie
-
 * Version 2.2:
   - Flood protection against abusive clients, by Timothee Besset
   - New system for managing game properties (see GAME PROPERTIES in manual.txt)

@@ -20,4 +20,4 @@ Server_SetGameProperty ($server2Ref, "gamename", "Warsow");
 my $clientRef = Client_New ();
 Client_SetGameProperty ($clientRef, "gamename", "Warsow");
 
-exit Test_Run ("Server using a new heartbeat");
+Test_Run ("Server using a new heartbeat");

@@ -12,4 +12,4 @@ Server_SetGameProperty ($serverRef, "gamename", $gamename);
 my $clientRef = Client_New ();
 Client_SetGameProperty ($clientRef, "gamename", $gamename);
 
-exit Test_Run ("Game name starting with a number");
+Test_Run ("Game name starting with a number");

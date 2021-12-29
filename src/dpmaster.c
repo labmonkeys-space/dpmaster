@@ -34,7 +34,7 @@
 // ---------- Constants ---------- //
 
 // Version of dpmaster
-#define VERSION "2.3-dev"
+#define VERSION "2.2"
 
 
 // ---------- Private variables ---------- //
@@ -893,7 +893,8 @@ System independent initializations, called AFTER the security initializations
 */
 static qboolean SecureInit (void)
 {
-	// Init the random seed
+	// Init the time and the random seed
+	crt_time = time (NULL);
 	srand ((unsigned int)crt_time);
 
 #ifdef SIGUSR1
@@ -943,9 +944,6 @@ Main function
 int main (int argc, const char* argv [])
 {
 	cmdline_status_t valid_options;
-
-	// Init the time
-	crt_time = time (NULL);
 
 	// Game properties must be initialized first, since the user
 	// may modify them using the command line's arguments

@@ -9,4 +9,4 @@ my $clientRef = Client_New ();
 
 Server_SetProperty ($serverRef, "masterProtocol", "Warsow");
 Server_SetProperty ($serverRef, "cannotBeAnswered", 1);
-exit Test_Run ("Server sending an unknown heartbeat");
+Test_Run ("Server sending an unknown heartbeat");

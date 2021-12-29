@@ -7,4 +7,4 @@ use testlib;
 Master_SetProperty ("maxNbServers", 0);
 Master_SetProperty ("exitvalue", 1);
 
-exit Test_Run ("Maximum number of servers set to zero on the command line");
+Test_Run ("Maximum number of servers set to zero on the command line");

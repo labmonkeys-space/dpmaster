@@ -10,4 +10,4 @@ Server_SetProperty ($serverRef, "useIPv6", 1);
 my $clientRef = Client_New ();
 Client_SetProperty ($clientRef, "useIPv6", 1);
 
-exit Test_Run ("Basic IPv6 support");
+Test_Run ("Basic IPv6 support");

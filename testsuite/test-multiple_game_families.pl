@@ -4,7 +4,6 @@ use strict;
 use testlib;
 
 
-my $fail = 0;
 my @serverPropertiesList = (
 	# DarkPlaces servers
 	{
@@ -89,4 +88,4 @@ foreach my $propertiesRef (@serverPropertiesList) {
 	}
 }
 
-exit Test_Run ("Servers running games from different game families");
+Test_Run ("Servers running games from different game families");
